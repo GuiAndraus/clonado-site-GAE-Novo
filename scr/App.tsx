@@ -8,12 +8,14 @@ export default function App(props: any) {
   });
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+    <div style={{ padding: "2rem" }}>
       <h1>{data.page.title}</h1>
       <p>{data.page.body}</p>
     </div>
   );
 }
+
+// 🔁 Estes exports SÃO OBRIGATÓRIOS!
 export const query = `
   query PageQuery($relativePath: String!) {
     page(relativePath: $relativePath) {
