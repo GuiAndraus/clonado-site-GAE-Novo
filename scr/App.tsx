@@ -14,3 +14,17 @@ export default function App(props: any) {
     </div>
   );
 }
+export const query = `
+  query PageQuery($relativePath: String!) {
+    page(relativePath: $relativePath) {
+      title
+      body
+    }
+  }
+`;
+
+export const variables = {
+  relativePath: "home.json",
+};
+
+export const data = {};
